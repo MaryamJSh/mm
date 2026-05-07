@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة زواج فاطمة وعمر</title>
+
+    <meta property="og:title" content="دعوة زواج فاطمة وعمر">
+    <meta property="og:description" content="يسعدنا حضوركم وتشريفكم لنا في ليلة العمر.. اضغطي لتأكيد الحضور">
+    <meta property="og:image" content="https://i.ibb.co/LzNf9m9/wedding-thumb.png">
+    <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="400">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Tajawal:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body { background-color: #f8f8f8; margin: 0; padding: 0; font-family: 'Tajawal', sans-serif; display: flex; flex-direction: column; align-items: center; }
+        .main-container { width: 100%; max-width: 500px; background: white; min-height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.1); text-align: center; }
+        .invitation-img { width: 100%; height: auto; display: block; }
+        .rsvp-toggle-btn { font-family: 'Amiri', serif; color: #d4af37; font-size: 30px; cursor: pointer; margin: 40px 0; display: inline-block; border-bottom: 2px solid #f0e6cc; padding-bottom: 5px; }
+        #rsvp-form-container { display: none; padding: 0 30px 40px 30px; animation: fadeIn 0.6s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        input, select { width: 100%; padding: 15px; margin: 12px 0; border: 1px solid #eee; border-radius: 12px; background: #fff; font-family: 'Tajawal', sans-serif; box-sizing: border-box; font-size: 16px; }
+        button { width: 100%; padding: 16px; background-color: #d4af37; color: white; border: none; border-radius: 50px; font-size: 18px; cursor: pointer; margin-top: 20px; font-weight: bold; }
+        .footer-text { margin: 40px 0; font-size: 14px; color: #aaa; }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <img src="https://i.postimg.cc/j5j2PSCq/dwn-ʿnwan-(600-x-600-byksl).png" class="invitation-img">
+
+    <div class="rsvp-toggle-btn" onclick="toggleRSVP()">تأكيد الحضور</div>
+
+    <div id="rsvp-form-container">
+        <form action="https://formspree.io/f/mzdoaeqv" method="POST">
+            <input type="text" name="الاسم" placeholder="الاسم الكريم" required>
+            <select name="الحضور" required>
+                <option value="" disabled selected>هل ستشرفينا بالحضور؟</option>
+                <option value="نعم">نعم، بكل سرور</option>
+                <option value="لا">نعتذر عن الحضور</option>
+            </select>
+            <input type="number" name="المرافقين" placeholder="عدد المرافقين">
+            <button type="submit">إرسال الرد</button>
+        </form>
+    </div>
+    <div class="footer-text">دامت دياركم بالأفراح عامرة</div>
+</div>
+
+<script>
+    function toggleRSVP() {
+        var form = document.getElementById("rsvp-form-container");
+        if (form.style.display === "none" || form.style.display === "") {
+            form.style.display = "block";
+            form.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            form.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
